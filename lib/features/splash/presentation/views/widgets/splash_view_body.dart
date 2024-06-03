@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_app/core/constants/assets_images.dart';
 import 'package:fruit_app/core/constants/router.dart';
+import 'package:intl/intl.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({
@@ -22,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   }
 
   void excuteNavigation() {
-     Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, AppRoutes.onBoarding);
     });
   }
@@ -35,7 +36,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: Intl.getCurrentLocale() == "ar"
+                ? MainAxisAlignment.end
+                : MainAxisAlignment.start,
             children: [
               SvgPicture.asset(
                 Assets.imagesPlant,
