@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
         "onBoardingSkip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "onBoardingStart": MessageLookupByLibrary.simpleMessage(" Start Now"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
             "Discover the freshest fruits in the world. Discover the freshest fruits in the world. Discover the freshest fruits in the world."),
         "onBoardingSubtitle2": MessageLookupByLibrary.simpleMessage(

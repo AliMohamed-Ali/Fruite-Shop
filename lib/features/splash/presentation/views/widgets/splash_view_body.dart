@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:fruit_app/core/constants/assets_images.dart';
-import 'package:fruit_app/core/constants/router.dart';
-import 'package:fruit_app/core/functions/is_arabic.dart';
+import 'package:fruit_app/core/utils/app_images.dart';
+import 'package:fruit_app/core/utils/app_routes.dart';
+import 'package:fruit_app/core/helper_functions/is_arabic.dart';
 // ignore: depend_on_referenced_packages
 
 class SplashViewBody extends StatefulWidget {

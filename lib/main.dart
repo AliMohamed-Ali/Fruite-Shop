@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_app/core/constants/router.dart';
+import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/on_generate_routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_app/generated/l10n.dart';

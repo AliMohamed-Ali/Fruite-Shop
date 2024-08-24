@@ -109,6 +109,16 @@ class S {
       args: [],
     );
   }
+
+  /// ` Start Now`
+  String get onBoardingStart {
+    return Intl.message(
+      ' Start Now',
+      name: 'onBoardingStart',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

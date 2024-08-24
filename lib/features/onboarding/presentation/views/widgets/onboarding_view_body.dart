@@ -1,25 +1,70 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:fruit_app/constants.dart';
+import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
+import 'package:fruit_app/generated/l10n.dart';
+import '../../../../../core/utils/app_colors.dart';
 
-class OnboardingViewBody extends StatelessWidget {
+class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
+
+  @override
+  State<OnboardingViewBody> createState() => _OnboardingViewBodyState();
+}
+
+class _OnboardingViewBodyState extends State<OnboardingViewBody> {
+  late final PageController _pageController;
+  var currentPage = 0;
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+
+    _pageController.addListener(() {
+      currentPage = _pageController.page!.round();
+      setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _pageController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Expanded(
-          child: OnboardingPageView(),
+        Expanded(
+          child: OnboardingPageView(controller: _pageController),
         ),
         DotsIndicator(
           dotsCount: 2,
-          position: 0,
-          decorator: const DotsDecorator(
-            color: Color(0xFF5DB957), // Inactive color
-            activeColor: Color(0xFF1B5E37),
+          position: 1,
+          decorator: DotsDecorator(
+            color: currentPage == 0
+                ? AppColors.primaryColor.withOpacity(0.5)
+                : AppColors.primaryColor, // Inactive color
+            activeColor: AppColors.primaryColor,
           ),
-        )
+        ),
+        const SizedBox(height: 29),
+        Visibility(
+          visible: currentPage == 1,
+          maintainAnimation: true,
+          maintainSize: true,
+          maintainState: true,
+          child: Padding(
+            padding: const EdgeInsets.only(
+                right: kHorizontalPadding,
+                left: kHorizontalPadding,
+                bottom: kBottomPadding),
+            child: CustomButton(
+                name: S.of(context).onBoardingStart, onPressed: () {}),
+          ),
+        ),
       ],
     );
   }
