@@ -97,5 +97,6 @@ flutter_assets:
   output_path: lib/core/constants/
   filename: assets_images.dart
   field_prefix: null
+  
 flutter_intl:
   enabled: true

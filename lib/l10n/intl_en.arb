@@ -1,1 +1,7 @@
-{}
+{
+  "appName": "App Name",
+  "home": "Home",
+  "search": "Search",
+  "settings": "Settings",
+  "searchHint": "Search"
+}

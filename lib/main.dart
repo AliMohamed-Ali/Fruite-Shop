@@ -24,7 +24,7 @@ class FruiteShop extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       locale: const Locale('ar'),
-      title: 'Fruit Shop',
+      title: S.of(context).appName,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

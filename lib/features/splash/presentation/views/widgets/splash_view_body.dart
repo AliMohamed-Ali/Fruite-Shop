@@ -3,7 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_app/core/constants/assets_images.dart';
 import 'package:fruit_app/core/constants/router.dart';
-import 'package:intl/intl.dart';
+import 'package:fruit_app/core/functions/is_arabic.dart';
+// ignore: depend_on_referenced_packages
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({
@@ -36,9 +37,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Row(
-            mainAxisAlignment: Intl.getCurrentLocale() == "ar"
-                ? MainAxisAlignment.end
-                : MainAxisAlignment.start,
+            mainAxisAlignment:
+                isArabic() ? MainAxisAlignment.end : MainAxisAlignment.start,
             children: [
               SvgPicture.asset(
                 Assets.imagesPlant,
