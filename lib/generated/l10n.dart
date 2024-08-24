@@ -60,41 +60,51 @@ class S {
     );
   }
 
-  /// `Home`
-  String get home {
+  /// `Welcom to`
+  String get onBoardingTitle1 {
     return Intl.message(
-      'Home',
-      name: 'home',
+      'Welcom to',
+      name: 'onBoardingTitle1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Search`
-  String get search {
+  /// `Discover the freshest fruits in the world. Discover the freshest fruits in the world. Discover the freshest fruits in the world.`
+  String get onBoardingSubtitle1 {
     return Intl.message(
-      'Search',
-      name: 'search',
+      'Discover the freshest fruits in the world. Discover the freshest fruits in the world. Discover the freshest fruits in the world.',
+      name: 'onBoardingSubtitle1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Settings`
-  String get settings {
+  /// `Skip`
+  String get onBoardingSkip {
     return Intl.message(
-      'Settings',
-      name: 'settings',
+      'Skip',
+      name: 'onBoardingSkip',
       desc: '',
       args: [],
     );
   }
 
-  /// `Search`
-  String get searchHint {
+  /// `Search and Shopping`
+  String get onBoardingTitle2 {
     return Intl.message(
-      'Search',
-      name: 'searchHint',
+      'Search and Shopping',
+      name: 'onBoardingTitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We offer you the best carefully selected fruits. See details, photos and reviews to make sure you choose the perfect fruit`
+  String get onBoardingSubtitle2 {
+    return Intl.message(
+      'We offer you the best carefully selected fruits. See details, photos and reviews to make sure you choose the perfect fruit',
+      name: 'onBoardingSubtitle2',
       desc: '',
       args: [],
     );

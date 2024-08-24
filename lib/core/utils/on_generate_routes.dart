@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_app/core/constants/router.dart';
-import 'package:fruit_app/features/on%20boarding/presentation/views/on_boarding_view.dart';
+import 'package:fruit_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:fruit_app/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {

@@ -1,7 +1,8 @@
 {
   "appName": "App Name",
-  "home": "Home",
-  "search": "Search",
-  "settings": "Settings",
-  "searchHint": "Search"
+  "onBoardingTitle1": "Welcom to",
+  "onBoardingSubtitle1": "Discover the freshest fruits in the world. Discover the freshest fruits in the world. Discover the freshest fruits in the world.",
+  "onBoardingSkip": "Skip",
+  "onBoardingTitle2": "Search and Shopping",
+  "onBoardingSubtitle2": "We offer you the best carefully selected fruits. See details, photos and reviews to make sure you choose the perfect fruit"
 }

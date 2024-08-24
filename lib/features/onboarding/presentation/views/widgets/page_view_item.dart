@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_app/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -37,16 +38,21 @@ class PageViewItem extends StatelessWidget {
                     image,
                   ),
                 ),
-                const Padding(padding: EdgeInsets.all(16), child: Text("تخط")),
+                Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(S.of(context).onBoardingSkip)),
               ],
             ),
           ),
           const SizedBox(height: 64),
           title,
           const SizedBox(height: 24),
-          Text(
-            subtitle,
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32.0),
+            child: Text(
+              subtitle,
+              textAlign: TextAlign.center,
+            ),
           ),
         ],
       ),
