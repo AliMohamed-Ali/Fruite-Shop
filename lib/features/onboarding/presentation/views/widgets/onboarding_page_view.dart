@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_images.dart';
+import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruit_app/generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -19,9 +21,16 @@ class OnboardingPageView extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(S.of(context).onBoardingTitle1),
-              const Text("Fruit"),
-              const Text("HUB"),
+              Text(
+                S.of(context).onBoardingTitle1,
+                style: TextStyles.bold23,
+              ),
+              Text("HUB",
+                  style: TextStyles.bold23
+                      .copyWith(color: const Color(0xFFAF5500))),
+              Text("Fruit",
+                  style: TextStyles.bold23
+                      .copyWith(color: AppColors.primaryColor)),
             ],
           ),
           subtitle: S.of(context).onBoardingSubtitle1,
@@ -30,7 +39,7 @@ class OnboardingPageView extends StatelessWidget {
         PageViewItem(
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
-          title: Text(S.of(context).onBoardingTitle2),
+          title: Text(S.of(context).onBoardingTitle2,style: TextStyles.bold23,),
           subtitle: S.of(context).onBoardingSubtitle2,
           isVisible: false,
         ),

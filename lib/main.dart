@@ -26,6 +26,7 @@ class FruiteShop extends StatelessWidget {
       title: 'Fruite Shop',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Cairo',
       ),
       onGenerateRoute: onGenerateRoute,
       initialRoute: AppRoutes.splash,

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_app/core/utils/app_colors.dart';
+import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -43,8 +45,13 @@ class PageViewItem extends StatelessWidget {
                 Visibility(
                   visible: isVisible,
                   child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Text(S.of(context).onBoardingSkip)),
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      S.of(context).onBoardingSkip,
+                      style: TextStyles.regular13
+                          .copyWith(color: AppColors.grayColor),
+                    ),
+                  ),
                 )
               ],
             ),
@@ -54,10 +61,8 @@ class PageViewItem extends StatelessWidget {
           const SizedBox(height: 24),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
-            child: Text(
-              subtitle,
-              textAlign: TextAlign.center,
-            ),
+            child: Text(subtitle,
+                textAlign: TextAlign.center, style: TextStyles.semiBold13),
           ),
         ],
       ),
