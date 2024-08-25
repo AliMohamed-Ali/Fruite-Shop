@@ -27,7 +27,7 @@ class OnboardingPageView extends StatelessWidget {
               ),
               Text("HUB",
                   style: TextStyles.bold23
-                      .copyWith(color: const Color(0xFFAF5500))),
+                      .copyWith(color: AppColors.secondaryColor)),
               Text("Fruit",
                   style: TextStyles.bold23
                       .copyWith(color: AppColors.primaryColor)),
@@ -39,7 +39,10 @@ class OnboardingPageView extends StatelessWidget {
         PageViewItem(
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2BackgroundImage,
-          title: Text(S.of(context).onBoardingTitle2,style: TextStyles.bold23,),
+          title: Text(
+            S.of(context).onBoardingTitle2,
+            style: TextStyles.bold23,
+          ),
           subtitle: S.of(context).onBoardingSubtitle2,
           isVisible: false,
         ),
