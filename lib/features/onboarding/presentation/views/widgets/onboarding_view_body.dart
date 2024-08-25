@@ -1,9 +1,12 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_app/constants.dart';
+import 'package:fruit_app/core/services/shared_preffrance_signletone.dart';
+import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 import 'package:fruit_app/generated/l10n.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class OnboardingViewBody extends StatefulWidget {
@@ -45,7 +48,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           position: 1,
           decorator: DotsDecorator(
             color: currentPage == 0
-                ? AppColors.primaryColor.withOpacity(0.5)
+                ? AppColors.secondaryColor
                 : AppColors.primaryColor, // Inactive color
             activeColor: AppColors.primaryColor,
           ),
@@ -62,7 +65,11 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 left: kHorizontalPadding,
                 bottom: kBottomPadding),
             child: CustomButton(
-                name: S.of(context).onBoardingStart, onPressed: () {}),
+                name: S.of(context).onBoardingStart,
+                onPressed: () async {
+                  await Pref.setBool(kIsOnboardingCompleted, true);
+                  Navigator.pushNamed(context, AppRoutes.login);
+                }),
           ),
         ),
       ],

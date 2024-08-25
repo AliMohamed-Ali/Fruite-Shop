@@ -2,9 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_app/constants.dart';
+import 'package:fruit_app/core/services/shared_preffrance_signletone.dart';
 import 'package:fruit_app/core/utils/app_colors.dart';
+import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/generated/l10n.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -46,10 +50,18 @@ class PageViewItem extends StatelessWidget {
                   visible: isVisible,
                   child: Padding(
                     padding: const EdgeInsets.all(16),
-                    child: Text(
-                      S.of(context).onBoardingSkip,
-                      style: TextStyles.regular13
-                          .copyWith(color: AppColors.grayColor),
+                    child: GestureDetector(
+                      onTap: () async {
+                        await Pref.setBool(kIsOnboardingCompleted, true);
+                        Navigator.of(context).pushReplacementNamed(
+                          AppRoutes.login,
+                        );
+                      },
+                      child: Text(
+                        S.of(context).onBoardingSkip,
+                        style: TextStyles.regular13
+                            .copyWith(color: AppColors.grayColor),
+                      ),
                     ),
                   ),
                 )

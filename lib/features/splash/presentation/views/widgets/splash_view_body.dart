@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruit_app/constants.dart';
+import 'package:fruit_app/core/services/shared_preffrance_signletone.dart';
 import 'package:fruit_app/core/utils/app_images.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/helper_functions/is_arabic.dart';
@@ -23,9 +25,15 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     excuteNavigation();
   }
 
-  void excuteNavigation() {
+  void excuteNavigation() async {
+    bool? onboardingCompleted = Pref.getBool(kIsOnboardingCompleted);
+
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.onBoarding);
+      if (onboardingCompleted == false) {
+        Navigator.pushReplacementNamed(context, AppRoutes.onBoarding);
+      } else {
+        Navigator.pushReplacementNamed(context, AppRoutes.login);
+      }
     });
   }
 
