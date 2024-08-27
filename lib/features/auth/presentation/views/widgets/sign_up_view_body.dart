@@ -24,7 +24,7 @@ class SignUpViewBody extends StatelessWidget {
             const SignUpForm(),
             const SizedBox(height: 26),
             DonORHaveAccountWidget(
-              route: AppRoutes.login,
+              onTap: () => Navigator.pop(context),
               text1: l10n.alreadyHaveAccount,
               text2: l10n.login,
             )

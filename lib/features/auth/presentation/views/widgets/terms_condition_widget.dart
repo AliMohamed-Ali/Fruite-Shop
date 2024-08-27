@@ -35,16 +35,27 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
     final l10n = L10Helper(context);
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Checkbox(
-          value: _isChecked,
-          onChanged: (bool? value) {
-            setState(() {
-              _isChecked = value ?? false;
-              widget.onChanged(_isChecked);
-            });
-          },
+        Transform.scale(
+          scale: 1.5,
+          child: Checkbox(
+            value: _isChecked,
+            onChanged: (bool? value) {
+              setState(() {
+                _isChecked = value ?? false;
+                widget.onChanged(_isChecked);
+              });
+            },
+            side: const BorderSide(color: Color(0xFFDDDFDF), width: 1.5),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(6),
+            ),
+            visualDensity: VisualDensity.compact,
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          ),
         ),
+        const SizedBox(width: 16),
         Expanded(
           child: RichText(
             text: TextSpan(
@@ -56,7 +67,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
                       ..onTap = widget.onTermsTap,
                     text: l10n.termsAndConditions,
                     style: TextStyles.bold16
-                        .copyWith(color: AppColors.darkPrimaryColor)),
+                        .copyWith(color: AppColors.lightPrimaryColor)),
               ],
             ),
           ),

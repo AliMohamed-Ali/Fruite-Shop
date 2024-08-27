@@ -26,7 +26,7 @@ class LoginViewBody extends StatelessWidget {
             const LoginForm(),
             const SizedBox(height: 33),
             DonORHaveAccountWidget(
-              route: AppRoutes.signUp,
+              onTap: () => Navigator.pushNamed(context, AppRoutes.signUp),
               text1: l10n.dontHaveAccount,
               text2: l10n.signUp,
             ),

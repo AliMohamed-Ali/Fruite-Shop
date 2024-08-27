@@ -51,7 +51,11 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
           ),
           const SizedBox(height: 16),
-          TermsAndConditionsWidget(onChanged: (val) {}, onTermsTap: () {}),
+          TermsAndConditionsWidget(
+              onChanged: (val) {
+                print(val);
+              },
+              onTermsTap: () {}),
           const SizedBox(height: 30),
           CustomButton(
             name: l10n.createNewAccount,
