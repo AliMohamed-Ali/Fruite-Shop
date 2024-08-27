@@ -18,4 +18,13 @@ class L10Helper {
   String get loginWithApple => S.of(context).loginWithApple;  
   String get loginWithFacebook => S.of(context).loginWithFacebook;  
   String get loginWithGoogle => S.of(context).loginWithGoogle;
+  String get createAccount => S.of(context).createAccount;
+  String get fullName => S.of(context).fullName;
+  String get fullNameHint => S.of(context).fullNameHint;
+  String get agreeTo => S.of(context).agreeTo;
+  String get termsAndConditions => S.of(context).termsAndConditions;
+  String get alreadyHaveAccount => S.of(context).alreadyHaveAccount;
+  String get createNewAccount => S.of(context).createNewAccount;
+
+
 }

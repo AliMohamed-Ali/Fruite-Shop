@@ -6,7 +6,6 @@ import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 import 'package:fruit_app/generated/l10n.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class OnboardingViewBody extends StatefulWidget {

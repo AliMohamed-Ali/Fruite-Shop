@@ -22,7 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agreeTo": MessageLookupByLibrary.simpleMessage(
+            "من خلال انشاء حساب, فأنت توافق على "),
+        "alreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("تمتلك حساب بالفعل؟ "),
         "appName": MessageLookupByLibrary.simpleMessage("متجر فواكه"),
+        "createAccount": MessageLookupByLibrary.simpleMessage("حساب جديد"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage(" ليس لديك حساب؟ "),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
@@ -30,6 +37,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الالكتروني"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
+        "fullNameHint":
+            MessageLookupByLibrary.simpleMessage("ادخل الاسم الكامل"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام Apple"),
@@ -50,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
-        "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب")
+        "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "termsAndConditions":
+            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا")
       };
 }

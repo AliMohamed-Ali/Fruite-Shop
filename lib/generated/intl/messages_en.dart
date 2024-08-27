@@ -22,13 +22,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "agreeTo": MessageLookupByLibrary.simpleMessage("I agree to"),
+        "alreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
+        "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+        "createNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create New Account"),
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password? "),
+        "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
+        "fullNameHint":
+            MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Login with Apple"),
@@ -49,6 +58,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
-        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up")
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "termsAndConditions":
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions")
       };
 }

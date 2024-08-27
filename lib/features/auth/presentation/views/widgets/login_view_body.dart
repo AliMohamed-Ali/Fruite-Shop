@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:fruit_app/constants.dart';
-import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_images.dart';
-import 'package:fruit_app/core/utils/app_text_styles.dart';
+import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_app_bar.dart';
 import 'package:fruit_app/core/widgets/or_divider.dart';
-import 'package:fruit_app/features/auth/presentation/views/widgets/don_have_account_widget.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/don_or_have_account_widget.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/login_form.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/custom_social_button.dart';
-import 'package:fruit_app/generated/l10n.dart';
 import 'package:fruit_app/l10n/l10_helper.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -28,7 +25,11 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 24),
             const LoginForm(),
             const SizedBox(height: 33),
-            const DonHaveAccountWidget(),
+            DonORHaveAccountWidget(
+              route: AppRoutes.signUp,
+              text1: l10n.dontHaveAccount,
+              text2: l10n.signUp,
+            ),
             const SizedBox(height: 33),
             const OrDivider(),
             const SizedBox(height: 16),

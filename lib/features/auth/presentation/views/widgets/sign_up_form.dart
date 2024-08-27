@@ -3,16 +3,17 @@ import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/core/widgets/custom_text_form_field.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/terms_condition_widget.dart';
 import 'package:fruit_app/l10n/l10_helper.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignUpForm extends StatefulWidget {
+  const SignUpForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignUpForm> createState() => _SignUpFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignUpFormState extends State<SignUpForm> {
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,12 @@ class _LoginFormState extends State<LoginForm> {
     return Form(
       child: Column(
         children: [
+          CustomTextFormField(
+            labelText: l10n.fullName,
+            hintText: l10n.fullNameHint,
+            keyboardType: TextInputType.text,
+          ),
+          const SizedBox(height: 16),
           CustomTextFormField(
             labelText: l10n.email,
             hintText: l10n.emailHint,
@@ -44,17 +51,10 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
           const SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(l10n.forgetPassword,
-                  style: TextStyles.semiBold13
-                      .copyWith(color: AppColors.lightPrimaryColor)),
-            ],
-          ),
-          const SizedBox(height: 33),
+          TermsAndConditionsWidget(onChanged: (val) {}, onTermsTap: () {}),
+          const SizedBox(height: 30),
           CustomButton(
-            name: l10n.login,
+            name: l10n.createNewAccount,
             onPressed: () {},
           ),
         ],

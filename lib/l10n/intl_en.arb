@@ -17,5 +17,12 @@
   "or": "OR",
   "loginWithGoogle": "Login with Google",
   "loginWithFacebook": "Login with Facebook",
-  "loginWithApple": "Login with Apple"
+  "loginWithApple": "Login with Apple",
+  "createAccount": "Create Account",
+  "fullName": "Full Name",
+  "fullNameHint": "Enter your full name",
+  "agreeTo": "I agree to",
+  "termsAndConditions": "Terms and Conditions",
+  "alreadyHaveAccount": "Already have an account? ",
+  "createNewAccount": "Create New Account"
 }

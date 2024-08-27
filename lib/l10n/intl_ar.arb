@@ -17,5 +17,12 @@
   "or": "أو",
   "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
   "loginWithFacebook": "تسجيل الدخول باستخدام فيس بوك",
-  "loginWithApple": "تسجيل الدخول باستخدام Apple"
+  "loginWithApple": "تسجيل الدخول باستخدام Apple",
+  "createAccount": "حساب جديد",
+  "fullName": "الاسم الكامل",
+  "fullNameHint": "ادخل الاسم الكامل",
+  "agreeTo": "من خلال انشاء حساب, فأنت توافق على ",
+  "termsAndConditions": "الشروط والاحكام الخاصة بنا",
+  "alreadyHaveAccount": "تمتلك حساب بالفعل؟ ",
+  "createNewAccount": "إنشاء حساب جديد"
 }

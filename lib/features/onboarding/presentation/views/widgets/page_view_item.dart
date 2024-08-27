@@ -8,8 +8,6 @@ import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/generated/l10n.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
       {super.key,
