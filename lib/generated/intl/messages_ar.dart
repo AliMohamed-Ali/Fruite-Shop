@@ -23,6 +23,20 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("متجر فواكه"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage(" ليس لديك حساب؟ "),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "emailHint":
+            MessageLookupByLibrary.simpleMessage("ادخل بريدك الالكتروني"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "loginWithApple":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام Apple"),
+        "loginWithFacebook": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول باستخدام فيس بوك"),
+        "loginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
         "onBoardingSkip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "onBoardingStart": MessageLookupByLibrary.simpleMessage("ابدا الان"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -31,6 +45,11 @@ class MessageLookup extends MessageLookupByLibrary {
             " نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية"),
         "onBoardingTitle1":
             MessageLookupByLibrary.simpleMessage("مرحبًا بك في "),
-        "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق")
+        "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordHint":
+            MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
+        "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب")
       };
 }

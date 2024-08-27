@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: AppColors.primaryColor,
+          backgroundColor: AppColors.darkPrimaryColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
           ),

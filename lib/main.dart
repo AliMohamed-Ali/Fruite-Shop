@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/on_generate_routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -29,7 +30,10 @@ class FruiteShop extends StatelessWidget {
       locale: const Locale('ar'),
       title: 'Fruite Shop',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.darkPrimaryColor,
+        ),
         fontFamily: 'Cairo',
       ),
       onGenerateRoute: onGenerateRoute,

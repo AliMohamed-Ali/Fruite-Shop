@@ -36,5 +36,8 @@ class Assets {
   /// Assets for imagesVector
   /// assets/images/Vector.svg
   static const String imagesVector = "assets/images/Vector.svg";
+  static const String imagesGoogle = "assets/images/google.svg";
+  static const String imagesFacebook = "assets/images/facebook.svg";
+  static const String imagesApple = "assets/images/apple.svg";
 }
 

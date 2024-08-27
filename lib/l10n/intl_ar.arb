@@ -5,5 +5,17 @@
   "onBoardingSkip": "تخطي",
   "onBoardingTitle2": "ابحث وتسوق",
   "onBoardingSubtitle2": " نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
-  "onBoardingStart": "ابدا الان"
+  "onBoardingStart": "ابدا الان",
+  "loginTitle": "تسجيل الدخول",
+  "email": "البريد الالكتروني",
+  "emailHint": "ادخل بريدك الالكتروني",
+  "passwordHint": "ادخل كلمة المرور",
+  "password": "كلمة المرور",
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "dontHaveAccount": " ليس لديك حساب؟ ",
+  "signUp": "قم بإنشاء حساب",
+  "or": "أو",
+  "loginWithGoogle": "تسجيل الدخول باستخدام جوجل",
+  "loginWithFacebook": "تسجيل الدخول باستخدام فيس بوك",
+  "loginWithApple": "تسجيل الدخول باستخدام Apple"
 }

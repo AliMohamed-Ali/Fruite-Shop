@@ -30,7 +30,7 @@ class OnboardingPageView extends StatelessWidget {
                       .copyWith(color: AppColors.secondaryColor)),
               Text("Fruit",
                   style: TextStyles.bold23
-                      .copyWith(color: AppColors.primaryColor)),
+                      .copyWith(color: AppColors.darkPrimaryColor)),
             ],
           ),
           subtitle: S.of(context).onBoardingSubtitle1,

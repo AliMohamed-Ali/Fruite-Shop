@@ -49,8 +49,8 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           decorator: DotsDecorator(
             color: currentPage == 0
                 ? AppColors.secondaryColor
-                : AppColors.primaryColor, // Inactive color
-            activeColor: AppColors.primaryColor,
+                : AppColors.darkPrimaryColor, // Inactive color
+            activeColor: AppColors.darkPrimaryColor,
           ),
         ),
         const SizedBox(height: 29),

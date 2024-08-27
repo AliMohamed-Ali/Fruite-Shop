@@ -23,6 +23,19 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("App Name"),
+        "dontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password? "),
+        "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginWithApple":
+            MessageLookupByLibrary.simpleMessage("Login with Apple"),
+        "loginWithFacebook":
+            MessageLookupByLibrary.simpleMessage("Login with Facebook"),
+        "loginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Login with Google"),
         "onBoardingSkip": MessageLookupByLibrary.simpleMessage("Skip"),
         "onBoardingStart": MessageLookupByLibrary.simpleMessage(" Start Now"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -31,6 +44,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "We offer you the best carefully selected fruits. See details, photos and reviews to make sure you choose the perfect fruit"),
         "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("Welcom to"),
         "onBoardingTitle2":
-            MessageLookupByLibrary.simpleMessage("Search and Shopping")
+            MessageLookupByLibrary.simpleMessage("Search and Shopping"),
+        "or": MessageLookupByLibrary.simpleMessage("OR"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordHint":
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up")
       };
 }
