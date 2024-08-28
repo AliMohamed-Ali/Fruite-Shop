@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruit_app/constants.dart';
-import 'package:fruit_app/core/services/shared_preffrance_signletone.dart';
+import 'package:fruit_app/core/services/shared_preferance_signletone.dart';
 import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';

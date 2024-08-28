@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
         "emailHint":
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الالكتروني"),
+        "fieldIsRequired":
+            MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),

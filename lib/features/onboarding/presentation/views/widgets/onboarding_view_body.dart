@@ -1,7 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_app/constants.dart';
-import 'package:fruit_app/core/services/shared_preffrance_signletone.dart';
+import 'package:fruit_app/core/services/shared_preferance_signletone.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';

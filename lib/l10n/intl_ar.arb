@@ -24,5 +24,6 @@
   "agreeTo": "من خلال انشاء حساب, فأنت توافق على ",
   "termsAndConditions": "الشروط والاحكام الخاصة بنا",
   "alreadyHaveAccount": "تمتلك حساب بالفعل؟ ",
-  "createNewAccount": "إنشاء حساب جديد"
+  "createNewAccount": "إنشاء حساب جديد",
+  "fieldIsRequired": "هذا الحقل مطلوب"
 }

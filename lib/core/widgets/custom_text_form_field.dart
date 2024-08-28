@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';
+import 'package:fruit_app/generated/l10n.dart';
 
 import '../utils/app_colors.dart';
 
@@ -12,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   final IconButton? prefixIcon;
   final IconButton? suffixIcon;
   final Function(String)? onChanged;
+  final Function(String?)? onSaved;
   final String? Function(String?)? validator;
   final Color borderColor;
   final double borderRadius;
@@ -28,7 +30,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.validator,
     this.borderColor = AppColors.borderColor,
-    this.borderRadius = 8.0,
+    this.borderRadius = 8.0, this.onSaved,
   }) : super(key: key);
 
   @override
@@ -38,11 +40,17 @@ class CustomTextFormField extends StatelessWidget {
       borderSide: BorderSide(color: borderColor, width: 1.0),
     );
     return TextFormField(
+      onSaved: onSaved,
       controller: controller,
       obscureText: obscureText,
       keyboardType: keyboardType,
       onChanged: onChanged,
-      validator: validator,
+      validator: (val) {
+        if (val!.isEmpty) {
+          return S.of(context).fieldIsRequired;
+        }
+        return null;
+      },
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,

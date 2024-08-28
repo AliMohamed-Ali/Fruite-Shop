@@ -25,6 +25,7 @@ class L10Helper {
   String get termsAndConditions => S.of(context).termsAndConditions;
   String get alreadyHaveAccount => S.of(context).alreadyHaveAccount;
   String get createNewAccount => S.of(context).createNewAccount;
+  String get fieldRequired => S.of(context).fieldIsRequired;
 
 
 }

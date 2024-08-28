@@ -24,5 +24,6 @@
   "agreeTo": "I agree to",
   "termsAndConditions": "Terms and Conditions",
   "alreadyHaveAccount": "Already have an account? ",
-  "createNewAccount": "Create New Account"
+  "createNewAccount": "Create New Account",
+  "fieldIsRequired": "This field is required"
 }
