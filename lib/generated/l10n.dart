@@ -319,6 +319,116 @@ class S {
       args: [],
     );
   }
+
+  /// `You must agree to the terms and conditions`
+  String get validTermsAndConditions {
+    return Intl.message(
+      'You must agree to the terms and conditions',
+      name: 'validTermsAndConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password provided is too weak.`
+  String get weakPassword {
+    return Intl.message(
+      'The password provided is too weak.',
+      name: 'weakPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The account already exists for that email.`
+  String get emailAlreadyInUse {
+    return Intl.message(
+      'The account already exists for that email.',
+      name: 'emailAlreadyInUse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email is not valid.`
+  String get invalidEmail {
+    return Intl.message(
+      'Email is not valid.',
+      name: 'invalidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password or email is invalid.`
+  String get wrongPassword {
+    return Intl.message(
+      'The password or email is invalid.',
+      name: 'wrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password or email is invalid.`
+  String get userNotFound {
+    return Intl.message(
+      'The password or email is invalid.',
+      name: 'userNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unknown error occurred.`
+  String get unknownError {
+    return Intl.message(
+      'An unknown error occurred.',
+      name: 'unknownError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network request failed.`
+  String get networkRequestFailed {
+    return Intl.message(
+      'Network request failed.',
+      name: 'networkRequestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This operation is not allowed.`
+  String get operationNotAllowed {
+    return Intl.message(
+      'This operation is not allowed.',
+      name: 'operationNotAllowed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too many requests. Try again later.`
+  String get tooManyRequests {
+    return Intl.message(
+      'Too many requests. Try again later.',
+      name: 'tooManyRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The user account has been disabled by an administrator.`
+  String get userDisabled {
+    return Intl.message(
+      'The user account has been disabled by an administrator.',
+      name: 'userDisabled',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

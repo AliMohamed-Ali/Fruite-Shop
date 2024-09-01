@@ -33,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage(" ليس لديك حساب؟ "),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكتروني"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "البريد الالكتروني مستخدم بالفعل"),
         "emailHint":
             MessageLookupByLibrary.simpleMessage("ادخل بريدك الالكتروني"),
         "fieldIsRequired":
@@ -42,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "fullNameHint":
             MessageLookupByLibrary.simpleMessage("ادخل الاسم الكامل"),
+        "invalidEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صالح"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام Apple"),
@@ -49,6 +53,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "تسجيل الدخول باستخدام فيس بوك"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
+        "networkRequestFailed":
+            MessageLookupByLibrary.simpleMessage("فشل الاتصال بالشبكة"),
         "onBoardingSkip": MessageLookupByLibrary.simpleMessage("تخطي"),
         "onBoardingStart": MessageLookupByLibrary.simpleMessage("ابدا الان"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -58,12 +64,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle1":
             MessageLookupByLibrary.simpleMessage("مرحبًا بك في "),
         "onBoardingTitle2": MessageLookupByLibrary.simpleMessage("ابحث وتسوق"),
+        "operationNotAllowed":
+            MessageLookupByLibrary.simpleMessage("عملية غير مسموحة"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
         "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "termsAndConditions":
-            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا")
+            MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا"),
+        "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "تم تجاوز عدد المحاولات المسموح بها"),
+        "unknownError": MessageLookupByLibrary.simpleMessage("خطأ غير معروف"),
+        "userDisabled": MessageLookupByLibrary.simpleMessage("المستخدم معطل"),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور او البريد الالكتروني غير صحيحة "),
+        "validTermsAndConditions": MessageLookupByLibrary.simpleMessage(
+            "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا"),
+        "weakPassword":
+            MessageLookupByLibrary.simpleMessage(" كلمة المرور ضعيفة جدا"),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور او البريد الالكتروني غير صحيحة ")
       };
 }

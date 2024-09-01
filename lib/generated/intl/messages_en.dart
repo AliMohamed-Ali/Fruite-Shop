@@ -32,6 +32,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dontHaveAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emailAlreadyInUse": MessageLookupByLibrary.simpleMessage(
+            "The account already exists for that email."),
         "emailHint": MessageLookupByLibrary.simpleMessage("Enter your email"),
         "fieldIsRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
@@ -40,6 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "fullNameHint":
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
+        "invalidEmail":
+            MessageLookupByLibrary.simpleMessage("Email is not valid."),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Login with Apple"),
@@ -47,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login with Facebook"),
         "loginWithGoogle":
             MessageLookupByLibrary.simpleMessage("Login with Google"),
+        "networkRequestFailed":
+            MessageLookupByLibrary.simpleMessage("Network request failed."),
         "onBoardingSkip": MessageLookupByLibrary.simpleMessage("Skip"),
         "onBoardingStart": MessageLookupByLibrary.simpleMessage(" Start Now"),
         "onBoardingSubtitle1": MessageLookupByLibrary.simpleMessage(
@@ -56,12 +62,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingTitle1": MessageLookupByLibrary.simpleMessage("Welcom to"),
         "onBoardingTitle2":
             MessageLookupByLibrary.simpleMessage("Search and Shopping"),
+        "operationNotAllowed": MessageLookupByLibrary.simpleMessage(
+            "This operation is not allowed."),
         "or": MessageLookupByLibrary.simpleMessage("OR"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "termsAndConditions":
-            MessageLookupByLibrary.simpleMessage("Terms and Conditions")
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "tooManyRequests": MessageLookupByLibrary.simpleMessage(
+            "Too many requests. Try again later."),
+        "unknownError":
+            MessageLookupByLibrary.simpleMessage("An unknown error occurred."),
+        "userDisabled": MessageLookupByLibrary.simpleMessage(
+            "The user account has been disabled by an administrator."),
+        "userNotFound": MessageLookupByLibrary.simpleMessage(
+            "The password or email is invalid."),
+        "validTermsAndConditions": MessageLookupByLibrary.simpleMessage(
+            "You must agree to the terms and conditions"),
+        "weakPassword": MessageLookupByLibrary.simpleMessage(
+            "The password provided is too weak."),
+        "wrongPassword": MessageLookupByLibrary.simpleMessage(
+            "The password or email is invalid.")
       };
 }

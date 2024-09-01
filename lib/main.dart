@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruit_app/core/services/custom_bloc_observer.dart';
 import 'package:fruit_app/core/services/git_it_service.dart';
 import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
@@ -16,6 +18,7 @@ void main() async {
   );
   setupGetit();
   await Pref.init();
+  Bloc.observer = CustomBlocObserver();
   runApp(const FruiteShop());
 }
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruit_app/core/utils/app_colors.dart';
-import 'package:fruit_app/core/utils/app_text_styles.dart';
+import 'package:fruit_app/core/helper_functions/error_snack_bar.dart';
 import 'package:fruit_app/core/widgets/custom_button.dart';
 import 'package:fruit_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_app/features/auth/presentation/cubits/signup_cubit/signup_cubit.dart';
@@ -22,6 +21,7 @@ class _SignUpFormState extends State<SignUpForm> {
   late TextEditingController nameController;
   late GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
+  bool isChecked = false;
 
   @override
   void initState() {
@@ -74,7 +74,9 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(height: 16),
           TermsAndConditionsWidget(
               onChanged: (val) {
-                print(val);
+                setState(() {
+                  isChecked = val;
+                });
               },
               onTermsTap: () {}),
           const SizedBox(height: 30),
@@ -85,6 +87,11 @@ class _SignUpFormState extends State<SignUpForm> {
                 setState(() {
                   autoValidateMode = AutovalidateMode.always;
                 });
+                return;
+              }
+
+              if (!isChecked) {
+                buildErrorBar(context, l10n.validTermsAndConditions);
                 return;
               }
               context.read<SignupCubit>().createUserWithEmailAndPassword(

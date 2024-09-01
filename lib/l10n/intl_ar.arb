@@ -25,5 +25,16 @@
   "termsAndConditions": "الشروط والاحكام الخاصة بنا",
   "alreadyHaveAccount": "تمتلك حساب بالفعل؟ ",
   "createNewAccount": "إنشاء حساب جديد",
-  "fieldIsRequired": "هذا الحقل مطلوب"
+  "fieldIsRequired": "هذا الحقل مطلوب",
+  "validTermsAndConditions": "يجب عليك الموافقة على الشروط والاحكام الخاصة بنا",
+  "weakPassword": " كلمة المرور ضعيفة جدا",
+  "wrongPassword": "كلمة المرور او البريد الالكتروني غير صحيحة ",
+  "invalidEmail": "البريد الالكتروني غير صالح",
+  "unknownError": "خطأ غير معروف",
+  "emailAlreadyInUse": "البريد الالكتروني مستخدم بالفعل",
+  "userNotFound": "كلمة المرور او البريد الالكتروني غير صحيحة ",
+  "operationNotAllowed": "عملية غير مسموحة",
+  "networkRequestFailed": "فشل الاتصال بالشبكة",
+  "userDisabled": "المستخدم معطل",
+  "tooManyRequests": "تم تجاوز عدد المحاولات المسموح بها"
 }

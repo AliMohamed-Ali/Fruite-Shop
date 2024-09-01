@@ -25,5 +25,16 @@
   "termsAndConditions": "Terms and Conditions",
   "alreadyHaveAccount": "Already have an account? ",
   "createNewAccount": "Create New Account",
-  "fieldIsRequired": "This field is required"
+  "fieldIsRequired": "This field is required",
+  "validTermsAndConditions": "You must agree to the terms and conditions",
+  "weakPassword": "The password provided is too weak.",
+  "emailAlreadyInUse": "The account already exists for that email.",
+  "invalidEmail": "Email is not valid.",
+  "wrongPassword": "The password or email is invalid.",
+  "userNotFound": "The password or email is invalid.",
+  "unknownError": "An unknown error occurred.",
+  "networkRequestFailed": "Network request failed.",
+  "operationNotAllowed": "This operation is not allowed.",
+  "tooManyRequests": "Too many requests. Try again later.",
+  "userDisabled": "The user account has been disabled by an administrator."
 }

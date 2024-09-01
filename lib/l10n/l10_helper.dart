@@ -14,7 +14,6 @@ class L10Helper {
   String get dontHaveAccount => S.of(context).dontHaveAccount;
   String get signUp => S.of(context).signUp;
   String get or => S.of(context).or;
-
   String get loginWithApple => S.of(context).loginWithApple;  
   String get loginWithFacebook => S.of(context).loginWithFacebook;  
   String get loginWithGoogle => S.of(context).loginWithGoogle;
@@ -26,6 +25,9 @@ class L10Helper {
   String get alreadyHaveAccount => S.of(context).alreadyHaveAccount;
   String get createNewAccount => S.of(context).createNewAccount;
   String get fieldRequired => S.of(context).fieldIsRequired;
+  String get validTermsAndConditions => S.of(context).validTermsAndConditions;
+  String get unknownError => S.of(context).unknownError;
+  String get networkRequestFailed => S.of(context).networkRequestFailed;
 
 
 }
