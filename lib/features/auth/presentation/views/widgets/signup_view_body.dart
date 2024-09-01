@@ -4,7 +4,7 @@ import 'package:fruit_app/constants.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_app_bar.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/don_or_have_account_widget.dart';
-import 'package:fruit_app/features/auth/presentation/views/widgets/sign_up_form.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/signup_form.dart';
 import 'package:fruit_app/l10n/l10_helper.dart';
 
 class SignUpViewBody extends StatelessWidget {

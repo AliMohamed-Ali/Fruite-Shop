@@ -32,7 +32,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (onboardingCompleted == false) {
         Navigator.pushReplacementNamed(context, AppRoutes.onBoarding);
       } else {
-        Navigator.pushReplacementNamed(context, AppRoutes.login);
+        Navigator.pushReplacementNamed(context, AppRoutes.signin);
       }
     });
   }

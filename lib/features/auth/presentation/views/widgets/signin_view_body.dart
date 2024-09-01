@@ -5,12 +5,12 @@ import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_app_bar.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/don_or_have_account_widget.dart';
-import 'package:fruit_app/features/auth/presentation/views/widgets/login_form.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/signin_form.dart';
 import 'package:fruit_app/features/onboarding/presentation/views/widgets/custom_social_button.dart';
 import 'package:fruit_app/l10n/l10_helper.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignInViewBody extends StatelessWidget {
+  const SignInViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 26),
             CustomAppBar(title: l10n.login),
             const SizedBox(height: 24),
-            const LoginForm(),
+            const SignInForm(),
             const SizedBox(height: 33),
             DonORHaveAccountWidget(
               onTap: () => Navigator.pushNamed(context, AppRoutes.signUp),

@@ -5,7 +5,7 @@ import 'package:fruit_app/core/helper_functions/get_error_message.dart';
 import 'package:fruit_app/core/services/git_it_service.dart';
 import 'package:fruit_app/features/auth/domain/repo/auth_repo.dart';
 import 'package:fruit_app/features/auth/presentation/cubits/signup_cubit/signup_cubit.dart';
-import 'package:fruit_app/features/auth/presentation/views/widgets/sign_up_view_body.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/signup_view_body.dart';
 import 'package:fruit_app/generated/l10n.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 

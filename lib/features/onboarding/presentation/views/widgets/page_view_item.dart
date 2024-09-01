@@ -8,6 +8,7 @@ import 'package:fruit_app/core/utils/app_colors.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/utils/app_text_styles.dart';
 import 'package:fruit_app/generated/l10n.dart';
+
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
       {super.key,
@@ -52,7 +53,7 @@ class PageViewItem extends StatelessWidget {
                       onTap: () async {
                         await Pref.setBool(kIsOnboardingCompleted, true);
                         Navigator.of(context).pushReplacementNamed(
-                          AppRoutes.login,
+                          AppRoutes.signin,
                         );
                       },
                       child: Text(

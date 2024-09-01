@@ -8,14 +8,14 @@ import 'package:fruit_app/features/auth/presentation/cubits/signIn_cubit/signin_
 import 'package:fruit_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruit_app/l10n/l10_helper.dart';
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class SignInForm extends StatefulWidget {
+  const SignInForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<SignInForm> createState() => _SignInFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _SignInFormState extends State<SignInForm> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   late TextEditingController emailController;
   late TextEditingController passwordController;

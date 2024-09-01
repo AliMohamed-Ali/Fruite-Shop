@@ -67,7 +67,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 name: S.of(context).onBoardingStart,
                 onPressed: () async {
                   await Pref.setBool(kIsOnboardingCompleted, true);
-                  Navigator.pushNamed(context, AppRoutes.login);
+                  Navigator.pushNamed(context, AppRoutes.signin);
                 }),
           ),
         ),

@@ -5,13 +5,13 @@ import 'package:fruit_app/core/services/git_it_service.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/features/auth/domain/repo/auth_repo.dart';
 import 'package:fruit_app/features/auth/presentation/cubits/signIn_cubit/signin_cubit.dart';
-import 'package:fruit_app/features/auth/presentation/views/widgets/login_view_body.dart';
+import 'package:fruit_app/features/auth/presentation/views/widgets/signin_view_body.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../../core/helper_functions/get_error_message.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class LoginView extends StatelessWidget {
             builder: (context, state) {
               return ModalProgressHUD(
                 inAsyncCall: state is SigninLoading,
-                child: const LoginViewBody(),
+                child: const SignInViewBody(),
               );
             },
           ),
