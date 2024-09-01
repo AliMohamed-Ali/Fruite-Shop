@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
+import 'package:fruit_app/features/auth/presentation/cubits/signIn_cubit/signin_cubit.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,6 +15,8 @@ class HomeView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
+              // context.read<SigninCubit>().signOut();
+              
               Navigator.pushNamed(context, AppRoutes.signin);
             },
             icon: const Icon(Icons.logout),

@@ -17,6 +17,7 @@ class SignInForm extends StatefulWidget {
 
 class _SignInFormState extends State<SignInForm> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
   late TextEditingController emailController;
   late TextEditingController passwordController;
 
@@ -32,6 +33,7 @@ class _SignInFormState extends State<SignInForm> {
   Widget build(BuildContext context) {
     final l10n = L10Helper(context);
     return Form(
+      autovalidateMode: autoValidateMode,
       key: formKey,
       child: Column(
         children: [
@@ -78,6 +80,10 @@ class _SignInFormState extends State<SignInForm> {
                       email: emailController.text,
                       password: passwordController.text,
                     );
+              } else {
+                setState(() {
+                  autoValidateMode = AutovalidateMode.always;
+                });
               }
             },
           ),

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:fruit_app/features/auth/domain/entites/user_entity.dart';
 import 'package:fruit_app/features/auth/domain/repo/auth_repo.dart';
 
 part 'signin_state.dart';
@@ -12,7 +13,28 @@ class SigninCubit extends Cubit<SigninState> {
     final result = await authRepo.signInWithEmailAndPassword(email, password);
     result.fold(
       (failure) => emit(SigninFailure(message: failure.message)),
-      (user) => emit(SigninSuccess()),
+      (user) => emit(SigninSuccess(user: user)),
     );
+  }
+  Future<void> signInWithGoogle() async {
+    emit(SigninLoading());
+    final result = await authRepo.signInWithGoogle();
+    result.fold(
+      (failure) => emit(SigninFailure(message: failure.message)),
+      (user) => emit(SigninSuccess(user: user)),
+    );
+  }
+  Future<void> signInWithFacebook() async {
+    emit(SigninLoading());
+    final result = await authRepo.signInWithFacebook();
+    result.fold(
+      (failure) => emit(SigninFailure(message: failure.message)),
+      (user) => emit(SigninSuccess(user: user)),
+    );
+  }
+  Future<void> signOut() async {
+    emit(SigninLoading());
+    await authRepo.signOut();
+    emit(SigninInitial());
   }
 }

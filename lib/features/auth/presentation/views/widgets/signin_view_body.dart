@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_app/constants.dart';
 import 'package:fruit_app/core/utils/app_images.dart';
 import 'package:fruit_app/core/utils/app_routes.dart';
 import 'package:fruit_app/core/widgets/custom_app_bar.dart';
+import 'package:fruit_app/features/auth/presentation/cubits/signIn_cubit/signin_cubit.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/don_or_have_account_widget.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/signin_form.dart';
@@ -36,7 +38,9 @@ class SignInViewBody extends StatelessWidget {
             CustomSocialButton(
               iconPath: Assets.imagesGoogle,
               label: l10n.loginWithGoogle,
-              onPressed: () {},
+              onPressed: () {
+                context.read<SigninCubit>().signInWithGoogle();
+              },
             ),
             CustomSocialButton(
               iconPath: Assets.imagesApple,
@@ -46,7 +50,9 @@ class SignInViewBody extends StatelessWidget {
             CustomSocialButton(
               iconPath: Assets.imagesFacebook,
               label: l10n.loginWithFacebook,
-              onPressed: () {},
+              onPressed: () {
+                context.read<SigninCubit>().signInWithFacebook();
+              },
             ),
           ],
         ),

@@ -33,9 +33,10 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
-      String email, String password)async {
-    try { 
-      var user = await firebaseAuthService.signInWithEmailAndPassword(email, password);
+      String email, String password) async {
+    try {
+      var user =
+          await firebaseAuthService.signInWithEmailAndPassword(email, password);
       return Right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
       return Left(ServerFailure(e.message));
@@ -43,5 +44,32 @@ class AuthRepoImpl extends AuthRepo {
       log('Exception from AuthRepoImpl.signInWithEmailAndPassword : ${e.toString()}');
       return Left(ServerFailure(e.toString()));
     }
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async {
+    try {
+      var user = await firebaseAuthService.signInWithGoogle();
+      return Right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log('Exception from AuthRepoImpl.signInWithGoogle : ${e.toString()}');
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+  
+  @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async{
+    try {
+      var user = await firebaseAuthService.signInWithFacebook();
+      return Right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log('Exception from AuthRepoImpl.signInWithFacebook : ${e.toString()}');
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+  
+  @override
+  Future<void> signOut() async{
+    return await firebaseAuthService.signOut();
   }
 }
