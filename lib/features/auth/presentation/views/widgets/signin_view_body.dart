@@ -54,6 +54,7 @@ class SignInViewBody extends StatelessWidget {
                 context.read<SigninCubit>().signInWithFacebook();
               },
             ),
+            const SizedBox(height: 16),
           ],
         ),
       ),

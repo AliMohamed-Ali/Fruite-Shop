@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fruite Shop</string>
+    <string name="facebook_app_id">1557476465188968</string>
+    <string name="fb_login_protocol_scheme">fb1557476465188968</string>
+    <string name="facebook_client_token">d30cae12881dee951529573e6f3f3fd6</string>
+</resources>
