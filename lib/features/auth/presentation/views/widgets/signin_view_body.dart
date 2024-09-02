@@ -45,7 +45,9 @@ class SignInViewBody extends StatelessWidget {
             CustomSocialButton(
               iconPath: Assets.imagesApple,
               label: l10n.loginWithApple,
-              onPressed: () {},
+              onPressed: () {
+                context.read<SigninCubit>().signInWithApple();
+              },
             ),
             CustomSocialButton(
               iconPath: Assets.imagesFacebook,

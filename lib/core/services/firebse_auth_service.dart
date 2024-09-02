@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'dart:developer' as devtools;
-import 'dart:math';
+import 'dart:developer';
+import 'dart:math' as math;
 
 import 'package:crypto/crypto.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -21,8 +21,7 @@ class FirebaseAuthService {
 
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      devtools.log(
-          'Exception from FirebaseAuthService.createUserWithEmailAndPassword : ${e.toString()} , code : ${e.code}');
+      log('Exception from FirebaseAuthService.createUserWithEmailAndPassword : ${e.toString()} , code : ${e.code}');
       if (e.code == 'weak-password') {
         throw CustomException(message: 'weakPassword');
       } else if (e.code == 'email-already-in-use') {
@@ -35,8 +34,7 @@ class FirebaseAuthService {
         throw CustomException(message: 'unknownError');
       }
     } catch (e) {
-      devtools.log(
-          'Exception from FirebaseAuthService.createUserWithEmailAndPassword : ${e.toString()}');
+      log('Exception from FirebaseAuthService.createUserWithEmailAndPassword : ${e.toString()}');
       throw CustomException(message: 'unknownError');
     }
   }
@@ -47,8 +45,7 @@ class FirebaseAuthService {
           .signInWithEmailAndPassword(email: email, password: password);
       return credential.user!;
     } on FirebaseAuthException catch (e) {
-      devtools.log(
-          'Exception from FirebaseAuthService.signInWithEmailAndPassword : ${e.toString()} , code : ${e.code}');
+      log('Exception from FirebaseAuthService.signInWithEmailAndPassword : ${e.toString()} , code : ${e.code}');
       if (e.code == 'user-not-found') {
         throw CustomException(message: 'userNotFound');
       } else if (e.code == 'wrong-password') {
@@ -59,8 +56,7 @@ class FirebaseAuthService {
         throw CustomException(message: 'unknownError');
       }
     } catch (e) {
-      devtools.log(
-          'Exception from FirebaseAuthService.signInWithEmailAndPassword : ${e.toString()}');
+      log('Exception from FirebaseAuthService.signInWithEmailAndPassword : ${e.toString()}');
       throw CustomException(message: 'unknownError');
     }
   }
@@ -75,7 +71,7 @@ class FirebaseAuthService {
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    devtools.log(credential.toString());
+    log(credential.toString());
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
@@ -99,7 +95,7 @@ class FirebaseAuthService {
   String generateNonce([int length = 32]) {
     const charset =
         '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
-    final random = Random.secure();
+    final random = math.Random.secure();
     return List.generate(length, (_) => charset[random.nextInt(charset.length)])
         .join();
   }
@@ -111,7 +107,7 @@ class FirebaseAuthService {
     return digest.toString();
   }
 
-  Future<UserCredential> signInWithApple() async {
+  Future<User> signInWithApple() async {
     // To prevent replay attacks with the credential returned from Apple, we
     // include a nonce in the credential request. When signing in with
     // Firebase, the nonce in the id token returned by Apple, is expected to
@@ -136,6 +132,6 @@ class FirebaseAuthService {
 
     // Sign in the user with Firebase. If the nonce we generated earlier does
     // not match the nonce in `appleCredential.identityToken`, sign in will fail.
-    return await FirebaseAuth.instance.signInWithCredential(oauthCredential);
+    return (await FirebaseAuth.instance.signInWithCredential(oauthCredential)).user!;
   }
 }
