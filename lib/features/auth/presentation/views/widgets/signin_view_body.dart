@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_app/constants.dart';
@@ -42,12 +44,15 @@ class SignInViewBody extends StatelessWidget {
                 context.read<SigninCubit>().signInWithGoogle();
               },
             ),
-            CustomSocialButton(
-              iconPath: Assets.imagesApple,
-              label: l10n.loginWithApple,
-              onPressed: () {
-                context.read<SigninCubit>().signInWithApple();
-              },
+            Visibility(
+              visible: Platform.isIOS,
+              child: CustomSocialButton(
+                iconPath: Assets.imagesApple,
+                label: l10n.loginWithApple,
+                onPressed: () {
+                  // context.read<SigninCubit>().signInWithApple();
+                },
+              ),
             ),
             CustomSocialButton(
               iconPath: Assets.imagesFacebook,
