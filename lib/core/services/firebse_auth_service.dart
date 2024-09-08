@@ -90,6 +90,10 @@ class FirebaseAuthService {
     await FirebaseAuth.instance.signOut();
   }
 
+  Future<void> deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+  }
+
   /// Generates a cryptographically secure random nonce, to be included in a
   /// credential request.
   // String generateNonce([int length = 32]) {
