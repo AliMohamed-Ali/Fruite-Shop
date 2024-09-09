@@ -1,6 +1,7 @@
 // ignore: implementation_imports
 import 'dart:developer';
 
+// ignore: implementation_imports
 import 'package:either_dart/src/either.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruit_app/core/errors/custom_exception.dart';
@@ -41,11 +42,21 @@ class AuthRepoImpl extends AuthRepo {
 
   Future<Either<Failure, UserEntity>> _signIn(
       Future<User> Function() signInMethod) async {
+    User? user;
     try {
-      var user = await signInMethod();
-      return Right(UserModel.fromFirebaseUser(user));
+      user = await signInMethod();
+      UserEntity userEntity = UserModel.fromFirebaseUser(user);
+      if (await isUserExist(uid: user.uid)) {
+       await getUserData(uid: user.uid);
+      }else{
+        await addUserData(user: userEntity);
+      }
+      return Right(userEntity);
     } catch (e) {
       log('Exception from AuthRepoImpl._signIn: ${e.toString()}');
+      if (user != null) {
+        await firebaseAuthService.deleteUser();
+      }
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -53,8 +64,15 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
       String email, String password) async {
-    return await _signIn(
-        () => firebaseAuthService.signInWithEmailAndPassword(email, password));
+    try {
+      var user =
+          await firebaseAuthService.signInWithEmailAndPassword(email, password);
+      var userEntity = await getUserData(uid: user.uid);
+      return Right(userEntity);
+    } catch (e) {
+      log('Exception from AuthRepoImpl.signInWithEmailAndPassword : ${e.toString()}');
+      return Left(ServerFailure(e.toString()));
+    }
   }
 
   @override
@@ -75,9 +93,22 @@ class AuthRepoImpl extends AuthRepo {
   @override
   Future<void> addUserData({required UserEntity user}) async {
     await databaseService.setData(
-        path: BackednEndpoint.addUserData, data: user.toMap());
+        path: BackednEndpoint.addUserData, data: user.toMap(), docId: user.uid);
   }
 
+  @override
+  Future<UserEntity> getUserData({required String uid}) async {
+    var user = await databaseService.getData(
+        path: BackednEndpoint.getUserData, docId: uid);
+    return UserModel.fromJson(user);
+  }
+
+  @override
+  Future<bool> isUserExist({required String uid}) async {
+    var isExist = await databaseService.isExist(
+        path: BackednEndpoint.getUserExist, docId: uid);
+    return isExist;
+  }
   // @override
   // Future<Either<Failure, UserEntity>> signInWithApple()async {
   //   try {

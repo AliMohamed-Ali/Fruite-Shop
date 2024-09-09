@@ -4,6 +4,7 @@ import 'package:fruit_app/features/auth/presentation/views/widgets/signin_view_b
 
 import '../../../../../core/helper_functions/error_snack_bar.dart';
 import '../../../../../core/helper_functions/get_error_message.dart';
+import '../../../../../core/helper_functions/success_bar.dart';
 import '../../../../../core/utils/app_routes.dart';
 import '../../../../../core/widgets/custom_progress_hud.dart';
 import '../../cubits/signIn_cubit/signin_cubit.dart';
@@ -20,6 +21,7 @@ class SignInViewBodyConsumer extends StatelessWidget {
         child: BlocConsumer<SigninCubit, SigninState>(
           listener: (context, state) {
             if (state is SigninSuccess) {
+              showSuccessBar(context, 'Signed in successfully');
               Navigator.pushReplacementNamed(context, AppRoutes.home);
             }
             if (state is SigninFailure) {
