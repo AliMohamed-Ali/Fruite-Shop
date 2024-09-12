@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
           IconButton(
             onPressed: () {
               // context.read<SigninCubit>().signOut();
-              
+
               Navigator.pushNamed(context, AppRoutes.signin);
             },
             icon: const Icon(Icons.logout),
