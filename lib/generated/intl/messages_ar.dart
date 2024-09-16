@@ -44,8 +44,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "fullNameHint":
             MessageLookupByLibrary.simpleMessage("ادخل الاسم الكامل"),
+        "homeAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("صباح الخير !..."),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صالح"),
+        "loginSuccess":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام Apple"),
@@ -70,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("ادخل كلمة المرور"),
+        "searchAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("ابحث عن فاكهة ..."),
         "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا"),

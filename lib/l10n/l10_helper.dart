@@ -28,6 +28,7 @@ class L10Helper {
   String get validTermsAndConditions => S.of(context).validTermsAndConditions;
   String get unknownError => S.of(context).unknownError;
   String get networkRequestFailed => S.of(context).networkRequestFailed;
+  String get homeAppBarTitle => S.of(context).homeAppBarTitle;
 
 
 }

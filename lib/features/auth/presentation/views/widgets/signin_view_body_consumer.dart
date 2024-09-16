@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_app/features/auth/presentation/views/widgets/signin_view_body.dart';
+import 'package:fruit_app/generated/l10n.dart';
 
 import '../../../../../core/helper_functions/error_snack_bar.dart';
 import '../../../../../core/helper_functions/get_error_message.dart';
@@ -21,7 +22,7 @@ class SignInViewBodyConsumer extends StatelessWidget {
         child: BlocConsumer<SigninCubit, SigninState>(
           listener: (context, state) {
             if (state is SigninSuccess) {
-              showSuccessBar(context, 'Signed in successfully');
+              showSuccessBar(context, S.of(context).loginSuccess);
               Navigator.pushReplacementNamed(context, AppRoutes.home);
             }
             if (state is SigninFailure) {

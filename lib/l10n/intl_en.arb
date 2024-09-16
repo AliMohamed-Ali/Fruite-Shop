@@ -36,5 +36,8 @@
   "networkRequestFailed": "Network request failed.",
   "operationNotAllowed": "This operation is not allowed.",
   "tooManyRequests": "Too many requests. Try again later.",
-  "userDisabled": "The user account has been disabled by an administrator."
+  "userDisabled": "The user account has been disabled by an administrator.",
+  "loginSuccess": "Login Successful",
+  "homeAppBarTitle": "Good Morning !...",
+  "searchAppBarTitle": "Search fruits ..."
 }

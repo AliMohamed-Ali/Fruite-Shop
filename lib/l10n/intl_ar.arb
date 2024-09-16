@@ -36,5 +36,8 @@
   "operationNotAllowed": "عملية غير مسموحة",
   "networkRequestFailed": "فشل الاتصال بالشبكة",
   "userDisabled": "المستخدم معطل",
-  "tooManyRequests": "تم تجاوز عدد المحاولات المسموح بها"
+  "tooManyRequests": "تم تجاوز عدد المحاولات المسموح بها",
+  "loginSuccess": "تم تسجيل الدخول بنجاح",
+  "homeAppBarTitle": "صباح الخير !...",
+  "searchAppBarTitle": "ابحث عن فاكهة ..."
 }

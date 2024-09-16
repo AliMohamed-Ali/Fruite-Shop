@@ -42,8 +42,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Full Name"),
         "fullNameHint":
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
+        "homeAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("Good Morning !..."),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("Email is not valid."),
+        "loginSuccess":
+            MessageLookupByLibrary.simpleMessage("Login Successful"),
         "loginTitle": MessageLookupByLibrary.simpleMessage("Login"),
         "loginWithApple":
             MessageLookupByLibrary.simpleMessage("Login with Apple"),
@@ -68,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordHint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "searchAppBarTitle":
+            MessageLookupByLibrary.simpleMessage("Search fruits ..."),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms and Conditions"),

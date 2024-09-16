@@ -429,6 +429,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Login Successful`
+  String get loginSuccess {
+    return Intl.message(
+      'Login Successful',
+      name: 'loginSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good Morning !...`
+  String get homeAppBarTitle {
+    return Intl.message(
+      'Good Morning !...',
+      name: 'homeAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search fruits ...`
+  String get searchAppBarTitle {
+    return Intl.message(
+      'Search fruits ...',
+      name: 'searchAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
