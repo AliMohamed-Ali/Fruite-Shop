@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your full name"),
         "homeAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Good Morning !..."),
+        "invalidCredentials": MessageLookupByLibrary.simpleMessage(
+            "The password or email is invalid."),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("Email is not valid."),
         "loginSuccess":
@@ -75,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchAppBarTitle":
             MessageLookupByLibrary.simpleMessage("Search fruits ..."),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "signupSuccess":
+            MessageLookupByLibrary.simpleMessage("Sign Up Successful"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

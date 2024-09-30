@@ -46,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ادخل الاسم الكامل"),
         "homeAppBarTitle":
             MessageLookupByLibrary.simpleMessage("صباح الخير !..."),
+        "invalidCredentials": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور او البريد الالكتروني غير صحيحة "),
         "invalidEmail":
             MessageLookupByLibrary.simpleMessage("البريد الالكتروني غير صالح"),
         "loginSuccess":
@@ -77,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "searchAppBarTitle":
             MessageLookupByLibrary.simpleMessage("ابحث عن فاكهة ..."),
         "signUp": MessageLookupByLibrary.simpleMessage("قم بإنشاء حساب"),
+        "signupSuccess":
+            MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
         "termsAndConditions":
             MessageLookupByLibrary.simpleMessage("الشروط والاحكام الخاصة بنا"),
         "tooManyRequests": MessageLookupByLibrary.simpleMessage(

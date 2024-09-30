@@ -39,5 +39,7 @@
   "userDisabled": "The user account has been disabled by an administrator.",
   "loginSuccess": "Login Successful",
   "homeAppBarTitle": "Good Morning !...",
-  "searchAppBarTitle": "Search fruits ..."
+  "searchAppBarTitle": "Search fruits ...",
+  "invalidCredentials": "The password or email is invalid.",
+  "signupSuccess": "Sign Up Successful"
 }

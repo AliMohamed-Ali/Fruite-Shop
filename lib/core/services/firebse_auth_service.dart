@@ -52,6 +52,8 @@ class FirebaseAuthService {
         throw CustomException(message: 'wrongPassword');
       } else if (e.code == 'network-request-failed') {
         throw CustomException(message: 'networkRequestFailed');
+      } else if (e.code == 'invalid-credential') {
+        throw CustomException(message: 'invalidCredentials');
       } else {
         throw CustomException(message: 'unknownError');
       }

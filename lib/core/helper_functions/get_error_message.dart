@@ -31,8 +31,10 @@ String getErrorMessage(String error, BuildContext context) {
     case 'tooManyRequests':
       errorMessage = S.of(context).tooManyRequests;
       break;
-    
 
+    case 'invalidCredentials':
+      errorMessage = S.of(context).invalidCredentials;
+      break;
     default:
       errorMessage = S.of(context).unknownError;
       break;

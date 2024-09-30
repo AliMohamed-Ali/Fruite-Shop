@@ -39,5 +39,7 @@
   "tooManyRequests": "تم تجاوز عدد المحاولات المسموح بها",
   "loginSuccess": "تم تسجيل الدخول بنجاح",
   "homeAppBarTitle": "صباح الخير !...",
-  "searchAppBarTitle": "ابحث عن فاكهة ..."
+  "searchAppBarTitle": "ابحث عن فاكهة ...",
+  "invalidCredentials": "كلمة المرور او البريد الالكتروني غير صحيحة ",
+  "signupSuccess": "تم التسجيل بنجاح"
 }

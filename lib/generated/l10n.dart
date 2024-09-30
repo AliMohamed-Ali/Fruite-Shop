@@ -459,6 +459,26 @@ class S {
       args: [],
     );
   }
+
+  /// `The password or email is invalid.`
+  String get invalidCredentials {
+    return Intl.message(
+      'The password or email is invalid.',
+      name: 'invalidCredentials',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up Successful`
+  String get signupSuccess {
+    return Intl.message(
+      'Sign Up Successful',
+      name: 'signupSuccess',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
